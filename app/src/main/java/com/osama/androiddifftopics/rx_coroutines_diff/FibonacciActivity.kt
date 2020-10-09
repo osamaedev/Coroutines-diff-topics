@@ -23,14 +23,14 @@ class FibonacciActivity : AppCompatActivity() {
 
 
     // The expression to calculate the Fibonacci Of a number
-    // is recursive method.
+    // is a recursive method.
     private fun fib(n: Long): Long {
         return if (n <= 1) n
         else fib(n - 1) + fib(n - 2)
     }
 
 
-    // region Using RXJava
+    // region -- Using RXJava --
 
     private fun executeFibAsync(number: Long) {
         progressBar.visibility = View.VISIBLE
