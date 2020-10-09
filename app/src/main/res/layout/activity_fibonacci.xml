@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rx_coroutines_diff.FibonacciActivity">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="241dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="This activity will calculate the Fibonacci of a given number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/fibToCalculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Number"
+        android:inputType="numberSigned"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="@+id/fibToCalculate"
+        app:layout_constraintStart_toStartOf="@+id/fibToCalculate"
+        app:layout_constraintTop_toBottomOf="@+id/fibToCalculate" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/theResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/calculate"
+        app:layout_constraintStart_toStartOf="@+id/calculate"
+        app:layout_constraintTop_toBottomOf="@+id/calculate"
+        tools:text="The result" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/theResult"
+        app:layout_constraintStart_toStartOf="@id/theResult"
+        app:layout_constraintTop_toBottomOf="@id/theResult" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
