@@ -122,7 +122,7 @@ class FibonacciActivity : AppCompatActivity() {
 
     private fun startFlow() {
         // here the use case is the start the coroutines and cancel it at the same time
-        // and see if it will be cancelled or not
+        // and see if it will be cancelled or not.
         this.cancelJob()
     }
 
